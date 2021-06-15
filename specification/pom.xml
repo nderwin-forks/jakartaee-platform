@@ -104,6 +104,11 @@
                         <artifactId>asciidoctorj-pdf</artifactId>
                         <version>${asciidoctorj.pdf.version}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-diagram</artifactId>
+                        <version>2.0.2</version>
+                    </dependency>
                 </dependencies>
                 <executions>
                     <!-- Platform HTML generation -->
@@ -194,6 +199,9 @@
                         <idseparator>-</idseparator>
                         <docinfo1>true</docinfo1>
                     </attributes>
+                    <requires>
+                        <require>asciidoctor-diagram</require>
+                    </requires>
                 </configuration>
             </plugin>
             <plugin>

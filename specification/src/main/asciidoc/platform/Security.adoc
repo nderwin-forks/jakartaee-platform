@@ -72,6 +72,32 @@ URL, shown in <<a253, Initial Request>> .
 .Initial Request
 image::Platform_Spec-3.png[]
 
+.Initial Request (ditaa-png-embedded)
+[ditaa, Platform_Spec-3.png, png]
+....
+
+Web Client                    Web Server
++--------+                    +--------+
+|        | Request access to  |        |
+|        | -----------------> |        |
+|        | protected resource |        |
++--------+                    +--------+
+
+....
+
+.Initial Request (ditaa-svg-embedded)
+[ditaa, Platform_Spec-3.svg, svg]
+....
+
+Web Client                    Web Server
++--------+                    +--------+
+|        | Request access to  |        |
+|        | -----------------> |        |
+|        | protected resource |        |
++--------+                    +--------+
+
+....
+
 Since the client has not yet authenticated
 itself to the application environment, the server responsible for
 delivering the web portion of the application (hereafter referred to as
@@ -89,6 +115,12 @@ to the web server, where it is validated by the web server, as shown in
 [[a257]]
 .Initial Authentication
 image::Platform_Spec-4.png[]
+
+.Initial Authentication (plantuml-png-external)
+plantuml::plantuml/Platform_Spec-4.puml[Platform_Spec-4.png]
+
+.Initial Authentication (plantuml-svg-external)
+plantuml::plantuml/Platform_Spec-4.puml[Platform_Spec-4.svg]
 
 The validation mechanism may be local to the
 server, or it may leverage the underlying security services. On the
@@ -109,6 +141,9 @@ shows this process.
 [[a261]]
 .URL Authorization
 image::Platform_Spec-5.png[]
+
+.URL Authorization (plantuml-png-external)
+plantuml::plantuml/Platform_Spec-5.puml[Platform_Spec-5.png]
 
 The web server’s evaluation stops with an “is
 authorized” outcome when the web server is able to map the user to a

@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+skinparam monochrome true
+skinparam linetype ortho
+
+rectangle wc as "Web Client"
+
+rectangle ws as "Web Server" {
+    rectangle cred as "Credential"
+}
+
+ws -->> wc : Form
+wc -->> cred : Authentication data
+
+@enduml

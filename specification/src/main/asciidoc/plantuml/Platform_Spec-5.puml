@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+skinparam monochrome true
+skinparam linetype ortho
+
+rectangle wc as "Web Client"
+
+rectangle ws as "Web Server" {
+    rectangle cred as "Credential"
+
+    rectangle jsp as "JSP/Servlet\nObject" {
+        rectangle foo as "Authentication"
+    }
+
+    label "Session\nContext"
+
+    ' force jsp to the right
+    cred -[hidden]- jsp
+}
+
+wc -->> cred : Request access to\nprotected resource
+
+@enduml
